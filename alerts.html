@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disaster Alerts - AeroRESQ</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">AeroRESQ</div>
+        <div class="nav-links">
+            <a href="index.html"><i class="fas fa-home"></i> Home</a>
+            <a href="weather.html"><i class="fas fa-cloud"></i> Weather</a>
+            <a href="alerts.html" class="active"><i class="fas fa-bell"></i> Alerts</a>
+            <a href="signin.html"><i class="fas fa-user"></i> Sign In</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section class="alerts-section">
+            <h1>Natural Disaster Alerts</h1>
+            
+            <div class="alerts-filter">
+                <div class="filter-group">
+                    <label for="alertType">Alert Type:</label>
+                    <select id="alertType">
+                        <option value="all">All Alerts</option>
+                        <option value="earthquake">Earthquakes</option>
+                        <option value="tsunami">Tsunamis</option>
+                        <option value="hurricane">Hurricanes</option>
+                        <option value="flood">Floods</option>
+                        <option value="wildfire">Wildfires</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="alertRegion">Region:</label>
+                    <select id="alertRegion">
+                        <option value="all">All Regions</option>
+                        <option value="local">Local Area</option>
+                        <option value="national">National</option>
+                        <option value="international">International</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="alerts-container">
+                <div class="active-alerts" id="activeAlerts">
+                    <h2><i class="fas fa-exclamation-circle"></i> Active Alerts</h2>
+                    <div class="alerts-list" id="activeAlertsList">
+                        <!-- Active alerts will be added here dynamically -->
+                    </div>
+                </div>
+
+                <div class="recent-alerts" id="recentAlerts">
+                    <h2><i class="fas fa-history"></i> Recent Events</h2>
+                    <div class="alerts-list" id="recentAlertsList">
+                        <!-- Recent alerts will be added here dynamically -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="alerts-map" id="alertsMap">
+                <h2><i class="fas fa-map-marked-alt"></i> Disaster Map</h2>
+                <div class="map-container" id="mapContainer">
+                    <!-- Map will be loaded here -->
+                </div>
+            </div>
+
+            <div class="safety-tips">
+                <h2><i class="fas fa-shield-alt"></i> Safety Tips</h2>
+                <div class="tips-container" id="safetyTipsContainer">
+                    <!-- Safety tips will be added here dynamically based on active alerts -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 AeroRESQ. All rights reserved.</p>
+    </footer>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY"></script>
+    <script src="alerts.js"></script>
+</body>
+</html> 

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast - AeroRESQ</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">AeroRESQ</div>
+        <div class="nav-links">
+            <a href="index.html"><i class="fas fa-home"></i> Home</a>
+            <a href="weather.html" class="active"><i class="fas fa-cloud"></i> Weather</a>
+            <a href="alerts.html"><i class="fas fa-bell"></i> Alerts</a>
+            <a href="signin.html"><i class="fas fa-user"></i> Sign In</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section class="weather-section">
+            <h1>Weather Forecast</h1>
+            <div class="weather-search">
+                <input type="text" id="locationInput" placeholder="Enter location">
+                <button id="searchButton"><i class="fas fa-search"></i></button>
+            </div>
+
+            <div class="weather-info">
+                <div id="currentWeather" class="current-weather">
+                    <h2>Current Weather</h2>
+                    <div class="weather-details">
+                        <div id="weather-icon" class="weather-icon">
+                            <i class="fas fa-cloud"></i>
+                        </div>
+                        <div class="weather-data">
+                            <p id="temperature">--°C</p>
+                            <p id="description">--</p>
+                            <p id="location">--</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="forecast" class="forecast">
+                    <h2>5-Day Forecast</h2>
+                    <div class="forecast-container" id="forecastContainer">
+                        <!-- Forecast items will be added here dynamically -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 AeroRESQ. All rights reserved.</p>
+    </footer>
+
+    <script src="weather.js"></script>
+</body>
+</html> 

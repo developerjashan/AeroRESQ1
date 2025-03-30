@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AeroRESQ - Disaster Management</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">AeroRESQ</div>
+        <div class="nav-links">
+            <a href="index.html" class="active"><i class="fas fa-home"></i> Home</a>
+            <a href="weather.html"><i class="fas fa-cloud"></i> Weather</a>
+            <a href="alerts.html"><i class="fas fa-bell"></i> Alerts</a>
+            <a href="signin.html"><i class="fas fa-user"></i> Sign In</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section class="hero">
+            <h1>Emergency Response System</h1>
+            <p>Quick access to emergency services during disasters</p>
+        </section>
+
+        <section class="sos-section">
+            <button id="sosButton" class="sos-button">
+                <i class="fas fa-exclamation-triangle"></i>
+                SOS
+            </button>
+            <p id="location-status" class="location-status"></p>
+        </section>
+
+        <section class="features">
+            <div class="feature-card">
+                <i class="fas fa-location-dot"></i>
+                <h3>Location Tracking</h3>
+                <p>Instant location sharing for quick response</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-cloud"></i>
+                <h3>Weather Updates</h3>
+                <p>Real-time weather forecasts and alerts</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-user-shield"></i>
+                <h3>Secure Access</h3>
+                <p>Protected personal information</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 AeroRESQ. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY"></script>
+</body>
+</html> 
